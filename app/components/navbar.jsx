@@ -121,57 +121,57 @@ function Navbar() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-[9999]">
-          <ul className="py-4">
-            <li className="px-6 py-3">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-[9999] backdrop-blur-md">
+          <ul className="py-6">
+            <li className="px-6 py-4">
               <Link 
                 href="/#about"
-                className="block hover:opacity-70 transition-opacity duration-300 font-medium"
+                className="block hover:opacity-70 transition-opacity duration-300 font-medium text-lg"
                 style={{ color: '#000000' }}
                 onClick={() => setIsMenuOpen(false)}
               >
                 About Me
               </Link>
             </li>
-            <li className="px-6 py-3">
+            <li className="px-6 py-4">
               <Link 
                 href="/#projects" 
-                className="block hover:opacity-70 transition-opacity duration-300 font-medium"
+                className="block hover:opacity-70 transition-opacity duration-300 font-medium text-lg"
                 style={{ color: '#000000' }}
                 onClick={() => setIsMenuOpen(false)}
               >
-                Portfolio
+                Projects
               </Link>
             </li>
-            <li className="px-6 py-3">
+            <li className="px-6 py-4">
               <Link 
                 href="/#skills"
-                className="block hover:opacity-70 transition-opacity duration-300 font-medium"
+                className="block hover:opacity-70 transition-opacity duration-300 font-medium text-lg"
                 style={{ color: '#000000' }}
                 onClick={() => setIsMenuOpen(false)}
               >
-                Services
+                Skills
               </Link>
             </li>
-            <li className="px-6 py-3">
+            <li className="px-6 py-4">
               <Link 
                 href="/blog"
-                className="block hover:opacity-70 transition-opacity duration-300 font-medium"
+                className="block hover:opacity-70 transition-opacity duration-300 font-medium text-lg"
                 style={{ color: '#000000' }}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Blog
               </Link>
             </li>
-            <li className="px-6 py-3 border-t border-gray-200 mt-2 pt-4">
+            <li className="px-6 py-4 border-t border-gray-200 mt-4 pt-6">
               <Link 
                 href="/#contact"
-                className="flex items-center gap-1.5 border border-black px-5 py-2.5 rounded font-medium hover:opacity-80 transition-opacity duration-300"
+                className="flex items-center justify-center gap-2 border-2 border-black px-6 py-3 rounded-lg font-medium hover:bg-black hover:text-white transition-all duration-300"
                 style={{ color: '#000000', borderColor: '#000000' }}
                 onClick={() => setIsMenuOpen(false)}
               >
                 <span>Book A Call</span>
-                <HiArrowUpRight size={12} />
+                <HiArrowUpRight size={14} />
               </Link>
             </li>
           </ul>

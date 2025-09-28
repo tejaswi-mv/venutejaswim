@@ -17,7 +17,7 @@ function HeroSection() {
         }}
         aria-label="Introduction and profile"
       >
-        {/* Vertical Text - Left Edge */}
+        {/* Vertical Text - Left Edge - Hidden on mobile */}
         <div 
           className="absolute left-2 top-0 bottom-0 flex flex-col justify-center py-20 px-4 hidden lg:flex"
           style={{ 
@@ -53,17 +53,31 @@ function HeroSection() {
           </p>
         </div>
 
-        {/* Main Content - Left Column */}
-        <div className="z-10 w-full lg:w-1/2 flex flex-col items-center lg:items-start p-8 lg:pl-28">
+        {/* Mobile: Image First, Content Second */}
+        <div className="lg:hidden w-full flex flex-col items-center px-4 pt-8">
+          {/* Mobile Image */}
+          <div className="w-64 h-64 sm:w-80 sm:h-80 mb-8 relative">
+            <Image
+              src="/profile1.svg"
+              alt={`Professional headshot of ${personalData.name}, a design wizard`}
+              fill
+              className="object-cover grayscale rounded-full"
+              priority
+            />
+          </div>
+        </div>
+
+        {/* Main Content - Left Column on Desktop, Full Width on Mobile */}
+        <div className="z-10 w-full lg:w-1/2 flex flex-col items-center lg:items-start px-4 sm:px-8 lg:pl-28">
           <article 
             className="w-full max-w-xl text-center lg:text-left"
             aria-label="Personal introduction and statistics"
           >
-          {/* Statistics Container */}
-          <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 mb-6 sm:mb-8 justify-center lg:justify-start">
-            <div aria-label="Projects completed">
+          {/* Statistics Container - Better mobile layout */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8 justify-center lg:justify-start">
+            <div aria-label="Projects completed" className="text-center lg:text-left">
               <span 
-                className="block text-3xl sm:text-4xl lg:text-5xl font-light leading-none mb-1"
+                className="block text-2xl sm:text-3xl lg:text-5xl font-light leading-none mb-1"
                 style={{ color: '#000000' }}
               >
                 +20
@@ -75,9 +89,9 @@ function HeroSection() {
                 Projects Automated 
               </span>
             </div>
-            <div aria-label="Startups raised">
+            <div aria-label="Technologies mastered" className="text-center lg:text-left">
               <span 
-                className="block text-3xl sm:text-4xl lg:text-5xl font-light leading-none mb-1"
+                className="block text-2xl sm:text-3xl lg:text-5xl font-light leading-none mb-1"
                 style={{ color: '#000000' }}
               >
                 +10
@@ -89,9 +103,9 @@ function HeroSection() {
                 Technologies Mastered
               </span>
             </div>
-            <div aria-label="Startups raised">
+            <div aria-label="Products developed" className="text-center lg:text-left">
               <span 
-                className="block text-3xl sm:text-4xl lg:text-5xl font-light leading-none mb-1"
+                className="block text-2xl sm:text-3xl lg:text-5xl font-light leading-none mb-1"
                 style={{ color: '#000000' }}
               >
                 +6
@@ -105,9 +119,9 @@ function HeroSection() {
             </div>
           </div>
 
-          {/* Main Hello Headline */}
+          {/* Main Hello Headline - Better mobile sizing */}
           <h1 
-            className="text-8xl sm:text-7xl lg:text-8xl xl:text-9xl font-extralight leading-none m-0 mb-4"
+            className="text-5xl sm:text-6xl lg:text-8xl xl:text-9xl font-extralight leading-none m-0 mb-4"
             style={{ 
               color: '#000000',
               fontFamily: 'Inter, system-ui, sans-serif',
@@ -119,7 +133,7 @@ function HeroSection() {
 
           {/* Sub-headline */}
           <p 
-            className="text-lg sm:text-xl lg:text-2xl mt-4 font-normal mb-8 sm:mb-12"
+            className="text-base sm:text-lg lg:text-2xl mt-4 font-normal mb-6 sm:mb-8 lg:mb-12"
             style={{ 
               color: '#000000',
               fontFamily: 'Inter, system-ui, sans-serif'
@@ -131,7 +145,7 @@ function HeroSection() {
           {/* Scroll Down Indicator */}
           <Link 
             href="#about"
-            className="flex flex-col items-center lg:items-start no-underline mt-8 sm:mt-12 text-sm hover:opacity-70 transition-opacity duration-300"
+            className="flex flex-col items-center lg:items-start no-underline mt-6 sm:mt-8 lg:mt-12 text-sm hover:opacity-70 transition-opacity duration-300"
             style={{ color: '#000000' }}
             aria-label="Scroll to about section"
           >
@@ -143,9 +157,9 @@ function HeroSection() {
           </article>
         </div>
         
-        {/* Right Column - Image */}
+        {/* Desktop: Right Column - Image */}
         <aside 
-          className="w-full lg:w-1/2 h-screen absolute top-9 right-5"
+          className="hidden lg:block w-1/2 h-screen absolute top-9 right-5"
           aria-label="Profile image"
         >
           <div className="relative w-full h-full">

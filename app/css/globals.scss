@@ -202,6 +202,82 @@ body {
   }
 }
 
+/* Enhanced mobile improvements */
+@media (max-width: 768px) {
+  /* Better touch targets */
+  button, a, input, textarea, select {
+    min-height: 44px;
+  }
+  
+  /* Improved spacing for mobile */
+  .mobile-spacing {
+    padding: 1rem !important;
+    margin: 0.5rem 0 !important;
+  }
+  
+  /* Better text readability on mobile */
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Improved form elements */
+  input, textarea, select {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 12px 16px;
+  }
+  
+  /* Better button sizing */
+  .mobile-btn {
+    min-height: 48px;
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+  
+  /* Improved card layouts */
+  .mobile-card {
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 12px;
+  }
+  
+  /* Better image handling */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Improved navigation */
+  .mobile-nav {
+    padding: 1rem;
+  }
+  
+  .mobile-nav ul {
+    gap: 0.75rem;
+  }
+  
+  .mobile-nav li {
+    padding: 0.75rem 0;
+  }
+  
+  /* Better project grid on mobile */
+  .mobile-project-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  /* Improved contact form */
+  .mobile-contact-form {
+    padding: 1rem;
+  }
+  
+  .mobile-contact-form input,
+  .mobile-contact-form textarea {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
 @media (max-width: 768px) {
   .main-hello-mobile {
     font-size: 3.5rem !important;

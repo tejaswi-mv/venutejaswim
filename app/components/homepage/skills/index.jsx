@@ -26,10 +26,10 @@ function Skills() {
         </div>
       </div>
 
-      <div className="w-full my-12">
+      <div className="w-full my-8 sm:my-12">
         <Marquee
           gradient={false}
-          speed={80}
+          speed={60}
           pauseOnHover={true}
           pauseOnClick={true}
           delay={0}
@@ -37,7 +37,7 @@ function Skills() {
           direction="left"
         >
           {skillsData.map((skill, id) => (
-            <div className="w-36 min-w-fit h-fit flex flex-col items-center justify-center transition-all duration-500 m-3 sm:m-5 rounded-lg group relative hover:scale-[1.15] cursor-pointer"
+            <div className="w-28 sm:w-36 min-w-fit h-fit flex flex-col items-center justify-center transition-all duration-500 m-2 sm:m-3 lg:m-5 rounded-lg group relative hover:scale-[1.1] sm:hover:scale-[1.15] cursor-pointer"
               key={id}>
               <div className="h-full w-full rounded-lg border border-[#1f223c] bg-[#11152c] shadow-none shadow-gray-50 group-hover:border-violet-500 transition-all duration-500">
                 <div className="flex -translate-y-[1px] justify-center">
@@ -45,17 +45,17 @@ function Skills() {
                     <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-violet-500 to-transparent" />
                   </div>
                 </div>
-                <div className="flex flex-col items-center justify-center gap-3 p-6">
-                  <div className="h-8 sm:h-10">
+                <div className="flex flex-col items-center justify-center gap-2 sm:gap-3 p-3 sm:p-6">
+                  <div className="h-6 sm:h-8 lg:h-10">
                     <Image
                       src={skillsImage(skill)?.src}
                       alt={skill}
-                      width={40}
-                      height={40}
+                      width={32}
+                      height={32}
                       className="h-full w-auto rounded-lg"
                     />
                   </div>
-                  <p className="text-white text-sm sm:text-lg">
+                  <p className="text-white text-xs sm:text-sm lg:text-lg text-center">
                     {skill}
                   </p>
                 </div>
