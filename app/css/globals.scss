@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+  --card-bg: #ffffff;
+  --card-border: #000000;
+  --accent-primary: #000000;
+  --accent-secondary: #333333;
+  --text-primary: #000000;
+  --text-secondary: #1a1a1a; /* Improved contrast from #333333 */
+  --gradient-start: #ffffff;
+  --gradient-end: #f8f8f8; /* Slightly darker for better contrast */
+  --focus-color: #0066cc; /* High contrast focus color */
+  --error-color: #dc2626; /* High contrast error color */
+  --success-color: #059669; /* High contrast success color */
+}
+
+[data-theme="dark"] {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 0, 0, 0;
+  --card-bg: #000000;
+  --card-border: #ffffff;
+  --accent-primary: #ffffff;
+  --accent-secondary: #cccccc;
+  --text-primary: #ffffff;
+  --text-secondary: #e5e5e5; /* Improved contrast from #cccccc */
+  --gradient-start: #000000;
+  --gradient-end: #1a1a1a;
+  --focus-color: #60a5fa; /* High contrast focus color for dark mode */
+  --error-color: #f87171; /* High contrast error color for dark mode */
+  --success-color: #34d399; /* High contrast success color for dark mode */
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .h-screen-half {
+    height: 50vh;
+  }
+  
+  /* Innovative Project Animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.6); }
+  }
+  
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-glow {
+    animation: glow 3s ease-in-out infinite;
+  }
+  
+  .animate-shimmer {
+    animation: shimmer 2s ease-in-out infinite;
+  }
+  
+  /* Fixed navbar spacing */
+  .navbar-offset {
+    padding-top: 80px;
+  }
+  
+  /* Ensure content doesn't scroll behind navbar */
+  .main-content {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/* Navbar fixes */
+header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 9999 !important;
+  width: 100% !important;
+}
+
+/* Ensure navbar stays above all content */
+header * {
+  z-index: 9999 !important;
+}
+
+/* Prevent any element from going above navbar */
+* {
+  z-index: auto;
+}
+
+header {
+  z-index: 9999 !important;
+}
+
+/* Ensure content doesn't overlap navbar */
+body {
+  padding-top: 0;
+}
+
+/* Accessibility improvements */
+*:focus {
+  outline: 2px solid var(--focus-color);
+  outline-offset: 2px;
+}
+
+/* Skip to content link for screen readers */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--accent-primary);
+  color: var(--background-rgb);
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --text-secondary: #000000;
+    --card-border: #000000;
+  }
+  
+  [data-theme="dark"] {
+    --text-secondary: #ffffff;
+    --card-border: #ffffff;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 1024px) {
+  .hero-section-mobile {
+    grid-template-columns: 1fr !important;
+    padding: 80px 20px 20px 20px !important;
+  }
+  
+  .hero-content-mobile {
+    grid-column: 1 / -1 !important;
+    padding-left: 20px !important;
+    order: 2 !important;
+    text-align: center !important;
+    max-width: none !important;
+  }
+  
+  .hero-image-mobile {
+    grid-column: 1 / -1 !important;
+    order: 1 !important;
+    justify-content: center !important;
+    margin-bottom: 40px !important;
+    position: static !important;
+    height: auto !important;
+  }
+  
+  .hero-image-mobile img {
+    max-height: 70vh !important;
+    width: 80% !important;
+    position: static !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-hello-mobile {
+    font-size: 3.5rem !important;
+    line-height: 0.9 !important;
+  }
+  
+  .stats-container-mobile {
+    flex-direction: column !important;
+    gap: 20px !important;
+    align-items: center !important;
+  }
+
+  /* Mobile navigation improvements */
+  .mobile-nav {
+    padding: 1rem !important;
+  }
+
+  .mobile-nav ul {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+  }
+
+  /* Mobile text sizing */
+  .mobile-text-sm {
+    font-size: 0.875rem !important;
+  }
+
+  .mobile-text-base {
+    font-size: 1rem !important;
+  }
+
+  .mobile-text-lg {
+    font-size: 1.125rem !important;
+  }
+
+  .mobile-text-xl {
+    font-size: 1.25rem !important;
+  }
+
+  /* Mobile spacing */
+  .mobile-p-4 {
+    padding: 1rem !important;
+  }
+
+  .mobile-p-6 {
+    padding: 1.5rem !important;
+  }
+
+  .mobile-mb-4 {
+    margin-bottom: 1rem !important;
+  }
+
+  .mobile-mb-6 {
+    margin-bottom: 1.5rem !important;
+  }
+
+  /* Mobile image sizing */
+  .mobile-img-container {
+    width: 100% !important;
+    height: 300px !important;
+    max-height: 50vh !important;
+  }
+
+  /* Mobile button sizing */
+  .mobile-btn {
+    padding: 0.75rem 1.5rem !important;
+    font-size: 0.875rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-hello-mobile {
+    font-size: 2.5rem !important;
+  }
+
+  .mobile-text-xs {
+    font-size: 0.75rem !important;
+  }
+
+  .mobile-p-2 {
+    padding: 0.5rem !important;
+  }
+
+  .mobile-img-container {
+    height: 250px !important;
+    max-height: 40vh !important;
+  }
+}
