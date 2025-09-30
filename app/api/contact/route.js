@@ -67,9 +67,19 @@ async function sendEmail(payload, message) {
   }
 };
 
+export async function GET(request) {
+  return NextResponse.json({
+    success: true,
+    message: 'Contact API is working',
+    method: 'GET'
+  }, { status: 200 });
+}
+
 export async function POST(request) {
   try {
+    console.log('Contact API called with method:', request.method);
     const payload = await request.json();
+    console.log('Received payload:', payload);
     const { name, email, message: userMessage } = payload;
     const token = process.env.TELEGRAM_BOT_TOKEN;
     const chat_id = process.env.TELEGRAM_CHAT_ID;
