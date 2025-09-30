@@ -96,14 +96,26 @@ export async function POST(request) {
 
     // Send Telegram message
     const telegramSuccess = await sendTelegramMessage(token, chat_id, message);
+    console.log('Telegram success:', telegramSuccess);
 
     // Send email
     const emailSuccess = await sendEmail(payload, message);
+    console.log('Email success:', emailSuccess);
 
-    if (telegramSuccess && emailSuccess) {
+    // Consider it successful if either method works
+    if (telegramSuccess || emailSuccess) {
+      let message = 'Message sent successfully!';
+      if (telegramSuccess && emailSuccess) {
+        message = 'Message and email sent successfully!';
+      } else if (emailSuccess) {
+        message = 'Email sent successfully!';
+      } else if (telegramSuccess) {
+        message = 'Telegram message sent successfully!';
+      }
+
       return NextResponse.json({
         success: true,
-        message: 'Message and email sent successfully!',
+        message: message,
       }, { status: 200 });
     }
 
