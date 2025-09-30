@@ -21,6 +21,16 @@ module.exports = {
         hostname: 'media2.dev.to',
         pathname: '**',
       },
+      {
+        protocol: 'https',
+        hostname: 'miro.medium.com',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'private-user-images.githubusercontent.com',
+        pathname: '**',
+      },
     ],
   },
 }

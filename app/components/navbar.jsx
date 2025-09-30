@@ -95,8 +95,18 @@ function Navbar() {
           </li>
         </ul>
 
-        {/* Book A Call Button - Desktop */}
-        <div className="hidden md:flex items-center">
+        {/* Resume and Book A Call Buttons - Desktop */}
+        <div className="hidden md:flex items-center gap-3">
+          <Link 
+            href="https://drive.google.com/file/d/YOUR_DRIVE_FILE_ID/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="no-underline border border-black px-5 py-2.5 rounded flex items-center gap-1.5 font-medium hover:opacity-80 transition-opacity duration-300"
+            style={{ color: '#000000', borderColor: '#000000' }}
+          >
+            <span>Resume</span>
+            <HiArrowUpRight size={12} />
+          </Link>
           <Link 
             href="/#contact"
             className="no-underline border border-black px-5 py-2.5 rounded flex items-center gap-1.5 font-medium hover:opacity-80 transition-opacity duration-300"
@@ -163,7 +173,18 @@ function Navbar() {
                 Blog
               </Link>
             </li>
-            <li className="px-6 py-4 border-t border-gray-200 mt-4 pt-6">
+            <li className="px-6 py-4 border-t border-gray-200 mt-4 pt-6 space-y-3">
+              <Link 
+                href="https://drive.google.com/file/d/YOUR_DRIVE_FILE_ID/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 border-2 border-black px-6 py-3 rounded-lg font-medium hover:bg-black hover:text-white transition-all duration-300"
+                style={{ color: '#000000', borderColor: '#000000' }}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <span>Resume</span>
+                <HiArrowUpRight size={14} />
+              </Link>
               <Link 
                 href="/#contact"
                 className="flex items-center justify-center gap-2 border-2 border-black px-6 py-3 rounded-lg font-medium hover:bg-black hover:text-white transition-all duration-300"

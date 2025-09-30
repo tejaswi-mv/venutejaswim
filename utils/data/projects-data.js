@@ -1,69 +1,137 @@
 export const projectsData = [
     {
-        id: 1,
-        name: 'AI Powered Financial App',
-        description: "Me and my team built an AI-powered financial mobile application. I have developed API using Express, Typescript, OpenAI, AWS, and MongoDB. Used OTP via AWS SES, Google, and Facebook for the authentication system. Built AI assistants using OpenAI's latest model and trained using our dataset. Voice messages are converted to text using AWS Transcribe. The app fetches data from Google Sheets and generates a PDF term sheet, sent via AWS SES.",
-        tools: ['Express', 'MongoDB', 'OpenAI API', 'AWS SES', 'AWS S3', 'Node Mailer', 'Joi', 'Puppeteer', 'EC2', 'PM2', 'Nginx'],
-        role: 'Backend Developer',
-        code: 'https://github.com/tejaswi-mv/ai-financial-app',
-        demo: 'https://ai-financial-app-demo.vercel.app',
-        image: '/image/gincy.gif',
-        features: ['AI Chat Assistant', 'Voice to Text', 'PDF Generation', 'Multi-factor Auth', 'Real-time Data']
+        "id": 1,
+        "name": "Ginchy.ai",
+        "description": "A SaaS application for the fashion industry that uses AI to generate professional product content. It allows users to create Product Display Pages (PDP), Lookbooks, and campaign visuals without the need for physical photoshoots. The platform features AI model generation, virtual try-on of garments, and customizable environments.",
+        "tools": [
+            "Next.js",
+            "React",
+            "TypeScript",
+            "Supabase",
+            "Stripe",
+            "Drizzle",
+            "PostgreSQL",
+            "Tailwind CSS",
+            "shadcn/ui"
+        ],
+        "role": "Full Stack Developer",
+        "code": "https://github.com/tejaswi-mv/ginchy.ai",
+        "demo": "https://ginchy-ai.vercel.app/",
+        "image": "/image/ginchy.jpg",
+        "features": [
+            "AI Model Generation",
+            "Virtual Garment Try-on",
+            "Customizable Backgrounds",
+            "Product Consistency Models",
+            "Campaign Visual Creation",
+            "Subscription-based plans"
+        ]
     },
     {
-        id: 2,
-        name: 'Travel Agency App',
-        description: 'I have designed and developed a full-stack web app for 2Expedition, a travel agency in Armenia. I created the UI using NextJS, Typescript, MUI, TailwindCSS, Google Maps, Sun-Editor, and React Slick. The app supports multiple languages and currencies. I developed the API using NestJS, Typescript, MySQL, TypeORM, AWS, and Nodemailer. I deployed the front-end app to AWS Amplify and the back-end app to AWS EC2.',
-        tools: ['NextJS', 'Tailwind CSS', "Google Maps", "NestJS", "TypeScript", "MySQL", "AWS S3", "Sun-Editor", "Gmail Passkey"],
-        role: 'Full Stack Developer',
-        code: 'https://github.com/tejaswi-mv/travel-agency-app',
-        demo: 'https://2expedition-travel.vercel.app',
-        image: '/image/travel.jpg',
-        features: ['Multi-language Support', 'Google Maps Integration', 'Currency Conversion', 'Booking System', 'Admin Dashboard']
+        "id": 2,
+        "name": "Campus Hub",
+        "description": "A web application that serves as a centralized platform for students to rent products from and to other students, find collaborators for projects, and communicate through a real-time chat feature. The application is built with a Next.js frontend, a Node.js backend with Prisma and a PostgreSQL database, and includes features like user authentication, product management, and a sentiment analysis API for all the products that are being created.",
+        "tools": [
+            "Next.js",
+            "React",
+            "TypeScript",
+            "Tailwind CSS",
+            "Prisma",
+            "PostgreSQL",
+            "Firebase",
+            "Zod",
+            "Next-Auth",
+            "Shadcn UI"
+        ],
+        "role": "Full Stack Developer",
+        "code": "https://github.com/tejaswi-mv/campus-hub",
+        "demo": "https://campus-hub-bice.vercel.app/",
+        "image": "/image/campushub.jpg",
+        "features": [
+            "Product Rental",
+            "Project Collaboration",
+            "Real-time Chat",
+            "User Authentication",
+            "Product Management",
+            "Sentiment Analysis"
+        ]
     },
     {
-        id: 3,
-        name: 'AI Powered Real Estate',
-        description: 'My team built an AI-based real estate app using Replicate API and OpenAI. We used Express, Typescript, OpenAI, Replicate, Stripe, and Mongoose to develop the API. We utilized NextJS, Formik, TailwindCSS, and other npm libraries for the UI. We have trained multiple AI assistants using the latest GPT model and integrated Replicate API for image processing. We added role-based auth, subscription plans, Cron job scheduling, and payment integration with Stripe.',
-        tools: ['React', 'Bootstrap', 'SCSS', 'Stripe', 'Express', 'TypeScript', 'MongoDB', 'Azure Blob', 'OpenAI API', 'Replicate AI', 'Cronjob', 'JWT'],
-        code: 'https://github.com/tejaswi-mv/ai-real-estate',
-        role: 'Full Stack Developer',
-        demo: 'https://ai-real-estate-demo.vercel.app',
-        image: '/image/real-estate.jpg',
-        features: ['AI Property Analysis', 'Image Processing', 'Subscription Plans', 'Role-based Auth', 'Payment Integration']
+        "id": 3,
+        "name": "Autom8n Labs",
+        "description": "A web application that helps businesses connect, manage, and supercharge their workflows. It provides tools to automate complex workflows, gain deep insights, and scale profitably with custom, done-for-you solutions.",
+        "tools": [
+            "Next.js",
+            "React",
+            "TypeScript",
+            "Tailwind CSS",
+            "PostCSS",
+            "ESLint"
+        ],
+        "role": "Frontend Developer",
+        "code": "https://github.com/tejaswi-mv/autom8n-labs",
+        "demo": "https://autom8nlabs.vercel.app/",
+        "image": "/image/automn.jpg",
+        "features": [
+            "Automation Pipelines",
+            "Integrations",
+            "AI Assistants",
+            "Observability",
+            "Permissions",
+            "Scheduling"
+        ]
     },
     {
-        id: 4,
-        name: 'Newsroom Management',
-        description: "My team and I developed a newspaper management dashboard application called Newsroom Management. As a front-end developer, I worked on creating the dashboard using NextJS, Material UI, Redux, Calendar, and other necessary npm libraries. We used React Redux to manage the application's state and React-hook-form and Sun Editor to handle forms.",
-        tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
-        code: 'https://github.com/tejaswi-mv/newsroom-management',
-        demo: 'https://newsroom-management-demo.vercel.app',
-        image: '/image/screen.png',
-        role: 'Full Stack Developer',
-        features: ['Content Management', 'Editorial Calendar', 'User Management', 'Rich Text Editor', 'Analytics Dashboard']
+        "id": 4,
+        "name": "Lead Generation n8n ",
+        "description": "An n8n workflow to automate lead generation. It scrapes leads from Apollo using an Apify actor, enriches the data with SpyFu for SEO and ad spend details, scores and prioritizes leads based on custom logic, and stores the final data in Google Sheets. It also includes a Telegram bot for interacting with the workflow.",
+        "tools": [
+            "n8n",
+            "Apify",
+            "SpyFu",
+            "Google Sheets",
+            "OpenAI",
+            "Telegram"
+        ],
+        "role": "Automation Specialist",
+        "code": "https://github.com/tejaswi-mv/lead-generation-n8n",
+        "demo": "",
+        "image": "/image/workflow.jpg",
+        "features": [
+            "Lead Scraping",
+            "Data Enrichment",
+            "Lead Scoring",
+            "Automated Outreach",
+            "Telegram Chatbot",
+            "Workflow Automation"
+        ]
     },
+  
     {
-        id: 5,
-        name: 'E-commerce Platform',
-        description: 'A full-stack e-commerce platform built with modern technologies. Features include user authentication, product catalog, shopping cart, payment processing, order management, and admin dashboard. The platform supports multiple payment methods and includes real-time inventory management.',
-        tools: ['NextJS', 'TypeScript', 'Prisma', 'PostgreSQL', 'Stripe', 'Tailwind CSS', 'NextAuth', 'Vercel'],
-        code: 'https://github.com/tejaswi-mv/ecommerce-platform',
-        demo: 'https://ecommerce-demo.vercel.app',
-        image: '/image/gincy.gif',
-        role: 'Full Stack Developer',
-        features: ['Product Catalog', 'Shopping Cart', 'Payment Processing', 'Order Management', 'Admin Dashboard']
-    },
-    {
-        id: 6,
-        name: 'Task Management App',
-        description: 'A collaborative task management application with real-time updates, team collaboration features, and project tracking. Built with modern web technologies and includes features like drag-and-drop, file attachments, and progress tracking.',
-        tools: ['React', 'Node.js', 'Socket.io', 'MongoDB', 'Express', 'Material-UI', 'JWT'],
-        code: 'https://github.com/tejaswi-mv/task-management',
-        demo: 'https://task-management-demo.vercel.app',
-        image: '/image/screen.png',
-        role: 'Full Stack Developer',
-        features: ['Real-time Collaboration', 'Drag & Drop', 'File Attachments', 'Progress Tracking', 'Team Management']
+        "id": 5,
+        "name": "Chat App Backend",
+        "description": "The backend for a real-time chat application built with Node.js and Express. It uses MongoDB for the database and Socket.IO for handling real-time bidirectional communication. Features include user authentication with JWT, password hashing with bcrypt, and RESTful APIs for handling messages and users.",
+        "tools": [
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "Socket.IO",
+            "JWT",
+            "bcryptjs",
+            "Mongoose"
+        ],
+        "role": "Backend Developer",
+        "code": "https://github.com/tejaswi-mv/Chat-App",
+        "demo": "https://chat-app-2-fo32.onrender.com/login",
+        "image": "/image/chatapp.jpg",
+        "features": [
+            "Real-time Messaging",
+            "User Authentication",
+            "JWT Protection",
+            "Password Encryption",
+            "RESTful APIs",
+            "Online User Status"
+        ]
     }
 ];
 

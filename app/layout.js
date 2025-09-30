@@ -14,6 +14,23 @@ export const metadata = {
   title: "Portfolio of Venu Tejaswi - Software Developer",
   description:
     "This is the portfolio of Venu Tejaswi. I am a full stack developer and a self taught developer. I love to learn new things and I am always open to collaborating with others. I am a quick learner and I am always looking for new challenges.",
+  icons: {
+    icon: '/profile.svg',
+    shortcut: '/profile.svg',
+    apple: '/profile.png',
+  },
+  openGraph: {
+    title: "Portfolio of Venu Tejaswi - Software Developer",
+    description: "This is the portfolio of Venu Tejaswi. I am a full stack developer and a self taught developer. I love to learn new things and I am always open to collaborating with others.",
+    images: ['/profile.png'],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Portfolio of Venu Tejaswi - Software Developer",
+    description: "This is the portfolio of Venu Tejaswi. I am a full stack developer and a self taught developer.",
+    images: ['/profile.png'],
+  },
 };
 
 export default function RootLayout({ children }) {
